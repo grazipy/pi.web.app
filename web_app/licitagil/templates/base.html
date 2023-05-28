@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% block title %}<title>Licitágil</title>{% endblock %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body class="conteiner">
+    <header>
+        <img src="caminho/para/o/logo.png" alt="Logotipo Licitágil">
+        <h1>Licitágil</h1>
+    </header>
+
+    <sidebar>
+    {% block sidebar %}
+        <ul>
+            <li><a href="{% url 'ganhas' %}">Licitações ganhas</a></li>
+            <li><a href="{% url 'ganhas' %}">Licitações em andamento</a></li>
+            <li><a href="{% url 'ganhas' %}">Futuras disputas</a></li>
+            <li><a href="{% url 'ganhas' %}">Agenda</a></li>
+        </ul>
+    {% endblock %}
+    </sidebar>
+
+    <content>
+    {% block content %}
+        <div id="lista-licitacoes">
+            <!-- Conteúdo da lista de licitações ganhas -->
+        </div>
+    {% endblock %}
+    </content>
+    <aside>Links</aside>
+    <footer>Footer</footer>
+</body>
+</html>

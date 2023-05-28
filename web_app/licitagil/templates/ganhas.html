@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+    {% if licitacoes_ganhas %}
+        <ul>
+            {% for licitacao in licitacoes_ganhas %}
+                <li>
+                    {{ licitacao.item  }}
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Não há licitações ganhas</p>
+    {% endif %}
+{% endblock %}
