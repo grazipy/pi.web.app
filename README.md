@@ -28,6 +28,6 @@ Instale os pacotes necessários com o comando pip:
 
 Execute o sistema usando o comando abaixo:
 
-> python3 manage.py runserver
+> py -3 manage.py runserver
 
 O sistema estará rodando em http://127.0.0.1:8000
