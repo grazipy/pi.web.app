@@ -11,7 +11,7 @@
                 <td>DATA DA DISPUTA</td>
                 <td>LINK ARQUIVOS</td>
             </tr>
-            {% if licitacoes_ganhas %}
+            {% if licitacoes_futuras %}
                 <tr>
                     {% for licitacao in licitacoes_ganhas %}
                         <td>{{ licitacao.uasg }}</td>
@@ -26,7 +26,7 @@
                 </tr>
             {% else %}
                 <tr>
-                    <td>Não há licitações ganhas</td>        
+                    <td>Não há licitações disponíveis</td>        
                 </tr>
             {% endif %}
         </table>
