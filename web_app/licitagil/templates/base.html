@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
-    <header>
-        <img src="caminho/para/o/logo.png" alt="Logotipo Licitágil">
-        <h1>Licitágil</h1>
-    </header>
+    <div class="logo">
+        <img class="logo" src="{% static 'img/logo.png' %}" alt="Logotipo Licitágil">
+    </div>
+    <div class="header"><h1>Licitágil</h1></div>
 
     <div class="sidebar">
     {% block sidebar %}
@@ -23,9 +23,9 @@
     {% endblock %}
     </div>
 
-    <div class="content">
+    <div class="dados">
     {% block content %}{% endblock %}
     </div>
-    <!-- <footer>Copyright © 2023 - Grupo 15 - PJI110 - Univesp</footer> -->
+    <footer>Copyright © 2023 - Grupo 15 - PJI110 - Univesp</footer>
 </body>
 </html>

@@ -1,9 +1,37 @@
-body {
-    display: flex;
+.container {
+    width: 1366px;
+    height: 768px;
+    display: grid;
+    grid: 
+        "logo header" 300px, 1fr
+        "sidebar dados" 300px, 1fr
+        "footer footer" 300px, 1fr
+        / 108px 600px 60px;
+}
+
+.container > div {
+    border: 1px dashed #888;
+}
+
+.logo {
+    grid-area: logo;
+    
+}
+
+.header {
+    grid-area: header;
+}
+
+.dados {
+    grid-area: dados;
+}
+
+.footer {
+    grid-area: footer;
 }
 
 .sidebar {
-    width: 200px;
+    grid-area: sidebar;
     background-color: #243c5a;
     color: #fff;
     padding: 20px;
@@ -25,9 +53,4 @@ body {
     padding: 10px;
     background-color: #4a90e2;
     border-radius: 5px;
-}
-
-.content {
-    flex: 1;
-    padding: 20px;
 }

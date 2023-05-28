@@ -9,7 +9,7 @@ def index(request):
     return render(request, 'index.html', context=context)
 
 def andamento(request):
-    return render(request, 'andamento.html', context=context)
+    return render(request, 'andamento.html', context)
 
 def futuras(request):
     return render(request, 'futuras.html', context=context)
