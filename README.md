@@ -25,3 +25,9 @@ O prompt deve ficar com o texto (venv) indicando que estamos dentro do ambiente 
 Instale os pacotes necessários com o comando pip:
 
 > pip install -r requirements.txt
+
+Execute o sistema usando o comando abaixo:
+
+> python3 manage.py runserver
+
+O sistema estará rodando em http://127.0.0.1:8000
