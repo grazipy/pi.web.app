@@ -8,24 +8,26 @@
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
-    <div class="logo">
-        <img class="logo" src="{% static 'img/logo.png' %}" alt="Logotipo Licitágil">
-    </div>
-    <div class="header"><h1>Licitágil</h1></div>
-
-    <div class="sidebar">
-    {% block sidebar %}
-        <ul>
-            <li><a href="{% url 'ganhas' %}">Licitações ganhas</a></li>
-            <li><a href="{% url 'andamento' %}">Licitações em andamento</a></li>
-            <li><a href="{% url 'futuras' %}">Futuras disputas</a></li>
-        </ul>
-    {% endblock %}
-    </div>
-
-    <div class="dados">
-    {% block content %}{% endblock %}
-    </div>
-    <footer>Copyright © 2023 - Grupo 15 - PJI110 - Univesp</footer>
+    <div class="main">
+        <logo>
+            <img src="{% static 'img/logo.png' %}" alt="Logotipo Licitágil" width="276" height="200">
+        </logo>
+        <header>
+            <img src="{% static 'img/titulo.jpeg' %}" alt="Cabeçalho" height="200" style="width: 100%">
+        </header>
+        <div class="sidebar">
+            {% block sidebar %}
+            <ul>
+                <li><a href="{% url 'ganhas' %}">Licitações ganhas</a></li>
+                <li><a href="{% url 'andamento' %}">Licitações em andamento</a></li>
+                <li><a href="{% url 'futuras' %}">Futuras disputas</a></li>
+            </ul>
+            {% endblock %}
+        </div>
+        <dados>
+            {% block content %}{% endblock %}
+        </dados>
+        <footer>Copyright © 2023 - Grupo 15 - PJI110 - Univesp</footer>
+    </main>
 </body>
 </html>

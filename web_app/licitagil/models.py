@@ -42,8 +42,10 @@ class Licitacao(models.Model):
     data_disputa = models.DateField()
     documentos = models.CharField(
         blank=False, 
-        max_length=50,
+        max_length=200,
     )
+
+    models.TextField
 
     def __str__(self):
         return self.equipamento

@@ -1,19 +1,21 @@
 {% extends "base.html" %}
 {% block content %}
-        <table>
-            <tr>
-                <td>UASG</td>
-                <td>CLIENTE</td>
-                <td>LOCAL DE ENTREGA</td>
-                <td>EQUIPAMENTO</td>
-                <td>TIPO DE COMPRA</td>
-                <td>TIPO DE ENVIO</td>
-                <td>DATA DA DISPUTA</td>
-                <td>LINK ARQUIVOS</td>
-            </tr>
-            {% if licitacoes_em_andamento %}
+{% load l10n %}
+{% localize on %}
+            <table>
                 <tr>
-                    {% for licitacao in licitacoes_ganhas %}
+                    <th>UASG</th>
+                    <th>CLIENTE</th>
+                    <th>LOCAL DE ENTREGA</th>
+                    <th>EQUIPAMENTO</th>
+                    <th>TIPO DE COMPRA</th>
+                    <th>TIPO DE ENVIO</th>
+                    <th>DATA DA DISPUTA</th>
+                    <th>LINK ARQUIVOS</th>
+                </tr>
+                {% if licitacoes_em_andamento %}
+                    {% for licitacao in licitacoes_em_andamento %}
+                    <tr>
                         <td>{{ licitacao.uasg }}</td>
                         <td>{{ licitacao.cliente }}</td>
                         <td>{{ licitacao.local_entrega }}</td>
@@ -21,13 +23,14 @@
                         <td>{{ licitacao.tipo_compra }}</td>
                         <td>{{ licitacao.tipo_envio }}</td>
                         <td>{{ licitacao.data_disputa }}</td>
-                        <td>{{ licitacao.documentos }}</td>
+                        <td><a href="{{ licitacao.documentos }}">Link</a></td>
+                    </tr>
                     {% endfor %}
-                </tr>
-            {% else %}
+                {% else %}
                 <tr>
                     <td>Não há licitações em disputa</td>        
                 </tr>
-            {% endif %}
-        </table>
+                {% endif %}
+            </table>
+{% endlocalize %}
 {% endblock %}

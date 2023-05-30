@@ -12,10 +12,10 @@ def andamento(request):
     return render(request, 'andamento.html', context)
 
 def futuras(request):
-    return render(request, 'futuras.html', context=context)
+    return render(request, 'futuras.html', context)
 
 def ganhas(request):
-    return render(request, 'ganhas.html', context=context)
+    return render(request, 'ganhas.html', context)
 
 class LicitacoesEmAndamento(generic.ListView):
     model = Licitacao
