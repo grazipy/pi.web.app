@@ -1,5 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
-  <p>{{ saudacao }}</p>
-  <a href="{% url 'admin:index' %}">Login Administrador</a>
+      <tr>
+        <td>{{ saudacao }}</td>        
+      </tr>
+      <tr>
+        <td><a href="{% url 'admin:index' %}">Login Administrador</a></td>        
+      </tr>
+    </table>
 {% endblock %}

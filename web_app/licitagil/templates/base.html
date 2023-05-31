@@ -10,7 +10,7 @@
 <body>
     <div class="main">
         <logo>
-            <img src="{% static 'img/logo.png' %}" alt="Logotipo Licitágil" width="276" height="200">
+            <img src="{% static 'img/logo.jpeg' %}" alt="Logotipo Licitágil" width="276" height="200">
         </logo>
         <header>
             <img src="{% static 'img/titulo.jpeg' %}" alt="Cabeçalho" height="200" style="width: 100%">
@@ -25,7 +25,19 @@
             {% endblock %}
         </div>
         <dados>
-            {% block content %}{% endblock %}
+            <table>
+                <tr>
+                    <th>UASG</th>
+                    <th>CLIENTE</th>
+                    <th>LOCAL DE ENTREGA</th>
+                    <th>EQUIPAMENTO</th>
+                    <th>TIPO DE COMPRA</th>
+                    <th>TIPO DE ENVIO</th>
+                    <th>DATA DA DISPUTA</th>
+                    <th>LINK ARQUIVOS</th>
+                </tr>
+            {% block content %}
+            {% endblock %}
         </dados>
         <footer>Copyright © 2023 - Grupo 15 - PJI110 - Univesp</footer>
     </main>

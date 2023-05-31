@@ -5,7 +5,7 @@ from django.views import generic
 from licitagil.models import Licitacao
 
 def index(request):
-    context = {'saudacao': "Bem vindo ao Sistema Licitágil"}
+    context = {'saudacao': "Bem vindo ao Sistema Licitágil! Selecione uma opção no menu."}
     return render(request, 'index.html', context=context)
 
 def andamento(request):

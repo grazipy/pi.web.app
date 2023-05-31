@@ -29,14 +29,19 @@ dados {
 
 footer {
     grid-area: rodape;
-    background-color: #4a90e2;
+    background-image: url('textura.jpeg');
+    background-repeat: no-repeat;
+    background-color: #0097b2;
     text-align: center;
+    font-weight: 500;
     padding: 10px;
+    color: #fff;
 }
 
 .sidebar {
     grid-area: menu;
-    background-color: #243c5a;
+    background-image: url('textura.jpeg');
+    background-color: #0097b2;
     color: #fff;
     padding: 20px;
 }
@@ -52,6 +57,9 @@ footer {
 
 .sidebar a {
     display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-stretch: expanded;
+    font-weight: bold;
     color: #fff;
     text-decoration: none;
     padding: 10px;
