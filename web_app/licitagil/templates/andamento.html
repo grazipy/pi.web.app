@@ -1,6 +1,19 @@
 {% extends "base.html" %}
-{% block content %}
+{% block content %} 
+        <table>
+            <tr>
+                <th>UASG</th>
+                <th>CLIENTE</th>
+                <th>LOCAL DE ENTREGA</th>
+                <th>EQUIPAMENTO</th>
+                <th>TIPO DE COMPRA</th>
+                <th>TIPO DE ENVIO</th>
+                <th>DATA DA DISPUTA</th>
+                <th>ARQUIVOS</th>
+                <th>EDITAR</th>
+            </tr>
             {% if licitacoes_em_andamento %}
+                {% load static %}
                 {% for licitacao in licitacoes_em_andamento %}
                 <tr>
                     <td>{{ licitacao.uasg }}</td>
@@ -11,6 +24,7 @@
                     <td>{{ licitacao.tipo_envio }}</td>
                     <td>{{ licitacao.data_disputa }}</td>
                     <td><a href="{{ licitacao.documentos }}">Link</a></td>
+                    <td><a href="{{ licitacao.get_absolute_url }}"><img src="{% static 'img/edit.png' %}" alt = "Editar" style="width:25px; height: 25px;"></a></td>
                 </tr>
                 {% endfor %}
             {% else %}

@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 # Create your models here.
 class Tipo_compra(models.Model):
@@ -44,8 +45,12 @@ class Licitacao(models.Model):
         blank=False, 
         max_length=200,
     )
+    
+    class Meta:
+        ordering = ['data_disputa']
 
-    models.TextField
+    def get_absolute_url(self):
+        return reverse('editar', args=[str(self.id)])
 
     def __str__(self):
         return self.equipamento

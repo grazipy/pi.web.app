@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
+    <table>
       <tr>
-        <td>{{ saudacao }}</td>        
       </tr>
       <tr>
-        <td><a href="{% url 'admin:index' %}">Login Administrador</a></td>        
+        <td style="text-align: center; font-size: large;">{{ saudacao }}</td>        
       </tr>
     </table>
 {% endblock %}

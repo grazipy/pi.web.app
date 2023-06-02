@@ -1,7 +1,10 @@
 from django.shortcuts import render
 from django.views import generic
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.urls import reverse, reverse_lazy
+from django.shortcuts import get_object_or_404
+from django.http import HttpResponseRedirect
 
-# Create your views here.
 from licitagil.models import Licitacao
 
 def index(request):
@@ -37,3 +40,15 @@ class LicitacoesGanhas(generic.ListView):
     queryset = Licitacao.objects.filter(ganhou=True)
     template_name = 'ganhas.html'
     paginate_by = 10
+
+class CadastrarLicitacao(CreateView):
+    model = Licitacao
+    fields = '__all__'
+
+class EditarLicitacao(UpdateView):
+    model = Licitacao
+    fields = '__all__'
+
+class ExcluirLicitacao(DeleteView):
+    model = Licitacao
+    success_url = reverse_lazy('andamento')
